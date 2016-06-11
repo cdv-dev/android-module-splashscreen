@@ -1,15 +1,17 @@
 ## **How to use:**
 
-* Project -> New -> Module -> Import Gradle Project
+* Project -> New -> Module -> Import Gradle Project;
 * add dependency to app/build.gradle
 
 ```
 dependencies {
    ....
 
-   compile project(':fontcustomizer');
+   compile project(':splashscreen');
 }
 ```
+
+* include ':splashscreen' into settings.gradle;
 
 * create activity and include import
 ```java
