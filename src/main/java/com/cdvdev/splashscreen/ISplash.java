@@ -1,6 +1,6 @@
 package com.cdvdev.splashscreen;
 
-import android.app.Activity;
+import android.support.v7.app.AppCompatActivity;
 
 /**
  * Interface for Splash Screen view
@@ -9,7 +9,7 @@ import android.app.Activity;
  * https://plus.google.com/+DmitriyChernysh-V/
  */
 
-public interface ISplash {
+interface ISplash {
     interface View {
 
         /**
@@ -32,6 +32,6 @@ public interface ISplash {
          * @param splashActivityReference Activity with WeakReference
          *                                (need to use this activity for finish or intent)
          */
-        void onRunNextActivity(Activity splashActivityReference);
+        void onStartNextActivity(AppCompatActivity splashActivityReference);
     }
 }

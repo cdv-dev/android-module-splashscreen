@@ -1,6 +1,5 @@
 package com.cdvdev.splashscreen;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
@@ -48,21 +47,18 @@ public abstract class BaseSplashActivity extends AppCompatActivity implements IS
 
     private static class StartActivityRunnable implements Runnable {
 
-        private WeakReference<Activity> mActivityReference;
+        private WeakReference<AppCompatActivity> mActivityReference;
 
-        private StartActivityRunnable(Activity activity) {
+        private StartActivityRunnable(AppCompatActivity activity) {
             mActivityReference = new WeakReference<>(activity);
         }
 
         @Override
         public void run() {
             if (mActivityReference.get() != null) {
-                Activity activity = mActivityReference.get();
-                /*
-                Intent intent = new Intent(activity, MainActivity.class);
-                activity.startActivity(intent);
-                */
-                ((ISplash.View) activity).onRunNextActivity(activity);
+                AppCompatActivity activity = mActivityReference.get();
+
+                ((ISplash.View) activity).onStartNextActivity(activity);
             }
 
         }
