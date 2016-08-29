@@ -1,7 +1,8 @@
 ## **How to use:**
 
-* Project -> New -> Module -> Import Gradle Project;
-* add dependency to app/build.gradle
+* Clone this repository or download zip.
+* Open Android Studio and select File -> New -> Import module -> Select directory "splashscreen". 
+* Check dependency in the app/build.gradle or add if there is no it:
 
 ```
 dependencies {
@@ -13,7 +14,7 @@ dependencies {
 
 * include ':splashscreen' into settings.gradle;
 
-* create activity and include import
+* create activity and include import:
 ```java
    import com.cdvdev.splashscreen.BaseSplashActivity;
 ```
